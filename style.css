@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sanas-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+nav{
+    background-color: #ffcc00; /* matches lightning bolt logo*/
+}
+
+nav img{
+    height: 40px;
+    cursor: pointer;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li{
+    margin: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolt;
+}
+
+nav ul li a:hover {
+  color: white; /* mouse-over feedback */
+}
+
+.active{
+    border-bottom: 2px solid black; /* highlights current page */
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: centre;
+    padding: 10px;
+}
