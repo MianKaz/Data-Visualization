@@ -39,3 +39,30 @@ footer{
   max-width:1000px;margin:auto;padding:14px 16px;font-size:.95rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
 }
 
+/* TV Energy Table */
+.tv-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+ 
+.tv-table th {
+background-color: #1e293b;
+color: white;
+padding: 12px;
+text-align: left;
+}
+ 
+.tv-table td {
+padding: 12px;
+border: 1px solid #ddd;
+}
+ 
+.tv-table tr:nth-child(even) {
+background-color: #f8fafc;
+}
+ 
+.tv-table tr:hover {
+background-color: #f1f5f9;
+}
