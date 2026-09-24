@@ -1,32 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Appliance Energy Consumption</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home | Appliance Energy (AU)</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <!--Navigation-->
-    <header>
-        <nav>
-            <img src="logo.png" alt="Power Logo" id="Logo"
-            <ul>
-                <li><a href="#" onclick="loadPage('home')">Home</a></li>
-                <li><a href="#" onclick="loadPage('television')">Television</a></li>
-                <li><a href="#" onclick="loadPage('about')">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="nav">
+      <img class="logo" src="power_logo.png" alt="Power logo" onclick="goHome()">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="televisions.html">Televisions</a>
+      <a data-nav href="about.html">About Us</a>
+    </nav>
+  </header>
 
-<!--Content Area-->
-<main id="content"></main>
+  <main>
+    <h1>Appliance Energy Use in Australia</h1>
+    <p>This site gives a simple overview of household appliance energy consumption in the Australian market.</p>
 
-<!--Footer-->
-<footer>
-    <p>&copy; <span id="year"></span> Damian | GenAI acknowledgement</p>
-</footer>
+    <section class="card">
+      <h2>Quick facts</h2>
+      <ul>
+        <li>Energy labels (star ratings) help compare appliance efficiency at a glance.</li>
+        <li>Standby power can add unexpected costs—turn devices fully off when not in use.</li>
+        <li>Choosing higher-efficiency models usually pays back through lower electricity bills.</li>
+      </ul>
+    </section>
+  </main>
 
-
-<script src="script.js"></script>
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Your Name</span>
+      <span>Built with assistance from GenAI for starter code/content</span>
+    </div>
+  </footer>
 </body>
 </html>

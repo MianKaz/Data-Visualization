@@ -1,24 +1,24 @@
-// Auto-update footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+// --- Logo click -> Home ---
+function goHome(){ window.location.href = "index.html"; }
 
-// Page content
-const pages = {
-  home: "<h1>Welcome to Appliance Energy Consumption</h1><p>Placeholder content about energy use in Australia.</p>",
-  televisions: "<h1>Television Energy Use</h1><p>Placeholder content about TV energy consumption in the Australian market.</p>",
-  about: "<h1>About Us</h1><p>We provide insights into appliance energy consumption trends.</p>"
-};
+// --- Highlight current page in nav ---
+(function setActiveNav(){
+  const path = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll('[data-nav]').forEach(a=>{
+    if(a.getAttribute('href') === path){ a.classList.add('active'); }
+  });
+})();
 
-// Load page function
-function loadPage(page) {
-  document.getElementById("content").innerHTML = pages[page];
+// --- Optional: dynamic year in footer ---
+(function setYear(){
+  const y = document.getElementById('year');
+  if(y){ y.textContent = new Date().getFullYear(); }
+})();
 
-  // Update active link
-  document.querySelectorAll("nav ul li a").forEach(link => link.classList.remove("active"));
-  event.target.classList.add("active");
-}
-
-// Default page
-loadPage("home");
-
-// Logo click → go home
-document.getElementById("logo").addEventListener("click", () => loadPage("home"));
+// --- “Swap pages using JavaScript” (intercept clicks) ---
+document.addEventListener('click', e=>{
+  const a = e.target.closest('a[data-nav]');
+  if(!a) return;
+  e.preventDefault();                // JS handles navigation
+  window.location.href = a.getAttribute('href');
+});
